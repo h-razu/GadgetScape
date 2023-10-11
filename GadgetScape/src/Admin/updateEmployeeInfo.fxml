@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="updateEmployeeInfoPane" prefHeight="590.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.UpdateEmployeeInfoController">
+   <children>
+      <TableView fx:id="updateEmpInfoTable" layoutX="43.0" layoutY="120.0" prefHeight="389.0" prefWidth="819.0">
+         <columns>
+            <TableColumn fx:id="empIDcol" prefWidth="89.0" text="ID" />
+            <TableColumn fx:id="empNameCol" prefWidth="157.0" text="NAME" />
+            <TableColumn fx:id="empPhoneCol" prefWidth="173.0" text="PHONE" />
+            <TableColumn fx:id="empEmailCol" prefWidth="155.0" text="EMAIL" />
+            <TableColumn fx:id="empAddressCol" prefWidth="244.0" text="ADDRESS" />
+         </columns>
+      </TableView>
+      <JFXTextArea fx:id="searchTxtField" layoutX="224.0" layoutY="29.0" prefHeight="59.0" prefWidth="394.0">
+         <font>
+            <Font size="22.0" />
+         </font></JFXTextArea>
+      <ImageView fx:id="searchBtn" fitHeight="51.0" fitWidth="77.0" layoutX="646.0" layoutY="36.0" onMouseClicked="#searchBtnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/searchBtn.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="updateBtn" layoutX="274.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#updateBtnAction" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #00008B; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="RefreshBtn" layoutX="534.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#refershBtnAction" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #00008B; -fx-background-radius: 10;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

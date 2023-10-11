@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee.CheckOutController">
+   <children>
+      <BorderPane prefHeight="690.0" prefWidth="1150.0" style="-fx-background-color: linear-gradient(to right top, #bdc3c7, #96a0a7, #707e89, #4d5d6c, #2c3e50);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.8" prefHeight="100.0" prefWidth="1150.0" spacing="10.0" style="-fx-background-color: #CAD5E2;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#backBtnAction" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../images/back.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="328.0" text="GadgetScape">
+                     <font>
+                        <Font name="Berlin Sans FB" size="50.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <Pane prefHeight="100.0" prefWidth="130.0" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="-Infinity" prefHeight="65.0" prefWidth="182.0" text="Check Out" textFill="#36454f">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Pane prefHeight="100.0" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" onMouseClicked="#profileContainerAction" prefHeight="100.0" prefWidth="280.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="empNameLabel" alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="217.0" text="Hadayet Ullah Razu">
+                           <font>
+                              <Font name="Berlin Sans FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="62.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/user.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="589.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="590.0" prefWidth="500.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="524.0" prefWidth="500.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ScrollPane prefHeight="367.0" prefWidth="288.0">
+                                       <content>
+                                          <TableView fx:id="cartTable" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="480.0">
+                                             <columns>
+                                                <TableColumn fx:id="chooseProductName" editable="false" prefWidth="220.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="Product Name" />
+                                                <TableColumn fx:id="chooseProductQuantity" prefWidth="100.0" style="-fx-alignment: center;" text="Quantity" />
+                                                <TableColumn fx:id="chooseProductPrice" prefWidth="78.0" style="-fx-alignment: center;" text="Price" />
+                                                <TableColumn fx:id="chooseProductDelete" prefWidth="73.0" />
+                                             </columns>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                    <HBox alignment="CENTER" prefHeight="63.0" prefWidth="378.0" spacing="10.0">
+                                       <children>
+                                          <Label prefHeight="27.0" prefWidth="187.0" text="Choose Quantity :" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Bold" size="22.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label alignment="CENTER" onMouseClicked="#decBtnAction" style="-fx-background-color: #ADC5CF;" text="-" textFill="#fffefe">
+                                             <font>
+                                                <Font name="Cambria Math" size="26.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                          <Label fx:id="quantityField" text="1" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Math" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" onMouseClicked="#incBtnAction" style="-fx-background-color: #ADC5CF;" text="+" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Math" size="25.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="15.0" right="15.0" />
+                                             </padding>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="51.0" prefWidth="494.0" spacing="30.0">
+                                       <children>
+                                          <Label text="Total Price:" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Bold" size="22.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="totalPrice" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Math" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="discountHbox" alignment="CENTER" prefHeight="51.0" prefWidth="494.0" spacing="30.0">
+                                       <children>
+                                          <Label text="Discount Price:" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="discountPrice" textFill="WHITE">
+                                             <font>
+                                                <Font name="Cambria Math" size="25.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="3.0" right="3.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Button fx:id="proceedBtn" layoutX="505.0" layoutY="529.0" mnemonicParsing="false" onAction="#submitBtnAction" prefHeight="47.0" prefWidth="140.0" style="-fx-background-radius: 12px;" text="Proceed">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="663.0" layoutY="-2.0" prefHeight="590.0" prefWidth="460.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="590.0" prefWidth="460.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="51.0" prefWidth="460.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="customerSearchText" prefHeight="31.0" prefWidth="248.0" promptText="Customer Name">
+                                       <font>
+                                          <Font name="Calibri" size="20.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button mnemonicParsing="false" onAction="#customerSearchAction" text="Search">
+                                       <font>
+                                          <Font name="Calibri Light Italic" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TableView fx:id="customer" prefHeight="200.0" prefWidth="432.0">
+                                <columns>
+                                  <TableColumn fx:id="customerName" editable="false" prefWidth="240.0" sortable="false" text="Customer Name" />
+                                    <TableColumn fx:id="customerPhone" prefWidth="214.0" text="Phone" />
+                                </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" prefHeight="62.0" prefWidth="460.0" spacing="30.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#chooseCustomerAction" text="Choose Customer">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#AddCustomerAction" text="Add Customer">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="66.0" prefWidth="460.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Customer Name:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customerNameText" textFill="WHITE">
+                                       <font>
+                                          <Font name="Monospaced Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="48.0" prefWidth="460.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Available Points:" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="points" textFill="WHITE">
+                                       <font>
+                                          <Font name="Monospaced Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="66.0" prefWidth="460.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="discountRB" mnemonicParsing="false" onAction="#redeemPointsAction" text="Redeem Points" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria Bold" size="20.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <Pane fx:id="logOutBtnContainer" layoutX="890.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="256.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 12px;">
+         <children>
+            <Button alignment="CENTER" layoutX="60.0" layoutY="16.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#logOutAction" prefWidth="150.0" style="-fx-border-color: #FFFF8D; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-background-color: rgba(255,255,255,0.2);" text="Log Out" textAlignment="CENTER">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

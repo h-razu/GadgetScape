@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="addCutomerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="717.0" style="-fx-background-color: linear-gradient(to top, #eaf2ff, #b5ccf7, #85a6ee, #567fe2, #1e58d3);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee.AddCustomerController">
+   <children>
+      <Label layoutX="103.0" layoutY="217.0" prefHeight="49.0" prefWidth="418.0" text="Please enter the phone number" textFill="#0d0d0d">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="newCustomerName" layoutX="207.0" layoutY="118.0" prefHeight="48.0" prefWidth="318.0" promptText="Customer Name">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <Label layoutX="103.0" layoutY="47.0" prefHeight="46.0" prefWidth="458.0" text="Please enter the name">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="308.0" layoutY="361.0" onAction="#doneButtonAction" prefHeight="59.0" prefWidth="102.0" style="-fx-background-color: #00008B; -fx-background-radius: 20;" text="Done" textFill="WHITE">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="46.0" fitWidth="45.0" layoutX="131.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/persom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="37.0" layoutX="135.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <JFXTextArea fx:id="newCustomerPhoneNo" focusColor="BLACK" layoutX="201.0" layoutY="278.0" prefHeight="59.0" prefWidth="318.0" promptText="Phone Number" unFocusColor="BLACK">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextArea>
+   </children>
+</AnchorPane>
