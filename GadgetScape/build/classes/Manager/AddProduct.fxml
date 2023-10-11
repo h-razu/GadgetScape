@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to right bottom, #051937, #004979, #0081a0, #00b899, #12eb66);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.AddProductController">
+   <children>
+      <Label layoutX="96.0" layoutY="51.0" text="Product Name:" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="166.0" text="Product Price:" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="379.0" text="Product Details:" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="productCategoryCombo" focusColor="WHITE" layoutX="471.0" layoutY="386.0" onAction="#productCategoryAction" prefHeight="31.0" prefWidth="287.0" promptText="Product Category" style="-fx-prompt-text-fill: White; -fx-text-fill: White;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="productNameTxtField" focusColor="WHITE" layoutX="91.0" layoutY="103.0" prefHeight="45.0" prefWidth="594.0" style="-fx-text-fill: white; -fx-font-size: 20px;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="productPriceTxtField" focusColor="WHITE" layoutX="91.0" layoutY="211.0" prefHeight="38.0" prefWidth="169.0" style="-fx-text-fill: white; -fx-font-size: 20px;" unFocusColor="WHITE" />
+      <JFXTextArea fx:id="productDetailsTxtField" focusColor="WHITE" layoutX="92.0" layoutY="435.0" prefHeight="97.0" prefWidth="481.0" style="-fx-text-fill: white; -fx-font-size: 20px;" unFocusColor="WHITE" />
+      <Label layoutX="471.0" layoutY="318.0" text="Please select product category" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="DoneBtn" layoutX="695.0" layoutY="486.0" onAction="#DoneBtnAction" prefHeight="44.0" prefWidth="117.0" style="-fx-background-radius: 20; -fx-background-color: #FFA500;" text="Done">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="91.0" layoutY="273.0" text="Quantity" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="QuantityTextField" focusColor="WHITE" layoutX="91.0" layoutY="318.0" prefHeight="38.0" prefWidth="169.0" style="-fx-text-fill: white; -fx-font-size: 20px;" unFocusColor="WHITE" />
+      <Label layoutX="471.0" layoutY="166.0" text="Image Location" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="ImgTextField" focusColor="WHITE" layoutX="471.0" layoutY="211.0" prefHeight="44.0" prefWidth="331.0" style="-fx-text-fill: white; -fx-font-size: 20px;" unFocusColor="WHITE" />
+   </children>
+</AnchorPane>

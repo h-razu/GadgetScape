@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.DeleteProductController">
+   <children>
+      <TableView fx:id="ProductInfoTable" layoutX="43.0" layoutY="120.0" prefHeight="396.0" prefWidth="814.0">
+         <columns>
+            <TableColumn fx:id="productIdCol" prefWidth="89.0" text="ID" />
+            <TableColumn fx:id="productNameCol" prefWidth="157.0" text="Name" />
+            <TableColumn fx:id="productCategoryCol" prefWidth="150.0" text="Category" />
+            <TableColumn fx:id="productPriceCol" prefWidth="143.0" text="Price" />
+            <TableColumn fx:id="productQuantityCol" prefWidth="274.0" text="Quantity" />
+         </columns>
+      </TableView>
+      <JFXTextArea fx:id="searchTxtField" layoutX="221.0" layoutY="36.0" prefHeight="51.0" prefWidth="394.0">
+         <font>
+            <Font size="22.0" />
+         </font></JFXTextArea>
+      <ImageView fx:id="searchBtn" fitHeight="51.0" fitWidth="77.0" layoutX="646.0" layoutY="36.0" onMouseClicked="#searchBtnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/searchBtn.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="391.0" layoutY="524.0" onAction="#DeleteBtnAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: FF5733;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

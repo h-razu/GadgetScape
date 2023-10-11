@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.EmployeeInfoController">
+   <children>
+      <TableView fx:id="empInfoTable" layoutX="43.0" layoutY="120.0" prefHeight="456.0" prefWidth="814.0">
+         <columns>
+            <TableColumn fx:id="empIDcol" prefWidth="89.0" text="ID" />
+            <TableColumn fx:id="empNameCol" prefWidth="157.0" text="NAME" />
+            <TableColumn fx:id="empPhoneCol" prefWidth="173.0" text="PHONE" />
+            <TableColumn fx:id="empEmailCol" prefWidth="155.0" text="EMAIL" />
+            <TableColumn fx:id="empAddressCol" prefWidth="242.0" text="ADDRESS" />
+         </columns>
+      </TableView>
+      <JFXTextArea fx:id="searchTxtField" layoutX="221.0" layoutY="36.0" prefHeight="51.0" prefWidth="394.0">
+         <font>
+            <Font size="22.0" />
+         </font></JFXTextArea>
+      <ImageView fx:id="searchBtn" fitHeight="51.0" fitWidth="77.0" layoutX="646.0" layoutY="36.0" onMouseClicked="#searchBtnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/searchBtn.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
